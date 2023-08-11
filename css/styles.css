@@ -62,6 +62,9 @@ body {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.64px;
+  border: none;
+  display: flex;
+  align-items: center;
 }
 
 .section-title {
@@ -519,32 +522,21 @@ body {
 /* FOOTER FORM */
 
 .footer-form {
-  margin-left: 80px;
-}
-
-.footer-form-list {
-  display: block;
-}
-
-.footer-form-item {
   display: flex;
-}
-
-.footer-form {
-  display: flex;
+  align-items: center;
   margin-top: 16px;
+}
+
+.footer-form-part {
+  margin-left: 80px;
 }
 
 .footer-form-field {
   display: inline-flex;
   position: relative;
-  padding: 16px 24px 16px;
-  gap: 8px;
 }
 
 .footer-form-label {
-  position: absolute;
-  top: -16px;
   color: var(--white-color);
   font-family: Roboto;
   font-size: 16px;
@@ -556,11 +548,13 @@ body {
 
 .footer-form-input {
   border-radius: 4px;
+  color: var(--white-color);
   border: 1px solid var(--white-color);
   background-color: transparent;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   width: 264px;
   height: 40px;
+  padding: 8px 16px;
 }
 
 .footer-form-input::placeholder {
@@ -571,12 +565,21 @@ body {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.48px;
-  padding: 8px 16px 8px;
 }
 
 .footer-form-button {
   color: var(--white-color);
   height: 40px;
+  width: 165px;
+  display: flex;
+  justify-content: center;
+  margin-left: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button:hover,
+.footer-form-button:focus {
+  background-color: var(--ocean-color);
 }
 
 .footer-subscribe-button {
@@ -589,8 +592,8 @@ body {
 }
 
 .footer-subscribe-icon {
-  align-items: center;
   fill: currentColor;
+  margin-left: 10px;
 }
 
 /* Portfolio page*/
@@ -723,8 +726,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
-  min-height: 584px;
+  width: 408px;
+  height: 584px;
+  /* min-height: 584px; */
+  padding: 72px 24px 24px 24px;
   background-color: var(--dairy-color);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -784,7 +789,7 @@ body {
   text-align: center;
   color: var(--navyblue-color);
   margin-bottom: 30px;
-  margin-top: 72px;
+  /* margin-top: 72px; */
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -793,16 +798,22 @@ body {
   letter-spacing: 0.48px;
 }
 
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-field {
   display: block;
   position: relative;
-  padding: 16px 24px 16px;
-  gap: 8px;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
 .form-label {
   position: absolute;
-  top: -4px;
+  top: -18px;
   color: var(--lightslate-color);
   font-size: 12px;
   font-style: normal;
@@ -813,7 +824,7 @@ body {
 .form-input {
   display: block;
   width: 100%;
-  height: 58px;
+  height: 40px;
   background-color: var(--white-color);
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -875,8 +886,28 @@ body {
 }
 
 .form-checkbox {
-  margin-left: 8px;
-  margin-right: -2px;
+  /* margin-left: 8px; */
+  /* margin-right: -2px; */
+}
+
+.visually-hidden {
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-checkbox-icon {
+  display: flex;
+  flex-direction: column;
+  fill: var(--ocean-color);
+  stroke-width: 1px;
+  stroke: var(--ocean-color);
+  border: 2px solid var(--ocean-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox:checked + .form-checkbox-icon {
@@ -889,16 +920,24 @@ body {
   color: var(--iris-color);
 }
 
+.form-term-accept {
+  color: var(--lightslate-color);
+  font-size: 12px;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
+}
+
 .form-agreement {
-  padding: 16px 24px 24px 16px;
+  /* padding: 16px 24px 24px 16px; */
+  margin-bottom: 24px;
 }
 
 .button-center {
   display: block;
-  margin: auto;
-  margin-top: 24px;
+  /* margin: auto; */
+  /* margin-top: 24px; */
   padding: 16px 32px;
-  display: block;
+  /* display: block; */
   width: 169px;
   height: 56px;
   background-color: var(--iris-color);
@@ -906,5 +945,5 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--white-color);
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 }
