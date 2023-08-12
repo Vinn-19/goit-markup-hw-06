@@ -745,14 +745,14 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 24px;
+  right: 24px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
   background-color: var(--cornflower-color);
   color: var(--navyblue-color);
@@ -805,7 +805,7 @@ body {
   display: block;
   position: relative;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .form-label {
@@ -825,7 +825,6 @@ body {
   background-color: var(--white-color);
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-bottom: 8px;
   padding: 11px 16px 11px 40px;
 }
 
